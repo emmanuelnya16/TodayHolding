@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+  --font-accent: "Montserrat", sans-serif;
+
+  --color-ths-blue-light: #2A56B3;
+  --color-ths-blue-medium: #0D2F72;
+  --color-ths-blue-dark: #071D47;
+  --color-ths-navy: #0D2F72;
+  --color-ths-gold: #C9A84C;
+  --color-ths-red: #E31E24;
+  --color-ths-green: #27AE60;
+
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+}
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --card-bg: #ffffff;
+  --card-border: #f1f5f9;
+}
+
+.dark {
+  --bg-primary: #070b14;
+  --bg-secondary: #0f172a;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --card-bg: #0f172a;
+  --card-border: #1e293b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans text-text-primary bg-bg-primary transition-colors duration-300;
+}
+
+.section-title {
+  @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ths-navy dark:text-white mb-6;
+}
+
+.section-subtitle {
+  @apply font-accent text-sm uppercase tracking-widest text-ths-gold font-semibold mb-2;
+}
+
+.glass-card {
+  @apply bg-bg-primary/80 dark:bg-bg-secondary/80 backdrop-blur-md border border-white/20 dark:border-white/5 shadow-lg;
+}
+
+.btn-primary {
+  @apply px-8 py-3 bg-ths-navy dark:bg-ths-gold dark:text-ths-navy text-white font-semibold rounded-full hover:bg-ths-blue-dark dark:hover:bg-white transition-all duration-300 shadow-md hover:shadow-xl;
+}
+
+.btn-gold {
+  @apply px-8 py-3 bg-ths-gold text-white dark:text-ths-navy font-semibold rounded-full hover:bg-[#b89740] dark:hover:bg-white transition-all duration-300 shadow-md hover:shadow-xl;
+}
+
+.btn-outline {
+  @apply px-8 py-3 border-2 border-ths-navy dark:border-ths-gold text-ths-navy dark:text-ths-gold font-semibold rounded-full hover:bg-ths-navy dark:hover:bg-ths-gold hover:text-white dark:hover:text-ths-navy transition-all duration-300;
+}
