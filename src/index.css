@@ -10,9 +10,12 @@
   --color-ths-blue-medium: #0D2F72;
   --color-ths-blue-dark: #071D47;
   --color-ths-navy: #0D2F72;
-  --color-ths-gold: #C9A84C;
+  --color-ths-gold: var(--ths-gold);
   --color-ths-red: #E31E24;
+  --color-ths-red-custom: #D43134;
   --color-ths-green: #27AE60;
+  --color-ths-blue-custom: #0F66D4;
+  --color-ths-red-custom-2: #8C0F12;
 
   --color-bg-primary: var(--bg-primary);
   --color-bg-secondary: var(--bg-secondary);
@@ -23,6 +26,7 @@
 }
 
 :root {
+  --ths-gold: #B89740; /* Darker gold for light mode contrast */
   --bg-primary: #ffffff;
   --bg-secondary: #f8fafc;
   --text-primary: #0f172a;
@@ -32,6 +36,7 @@
 }
 
 .dark {
+  --ths-gold: #C9A84C;
   --bg-primary: #070b14;
   --bg-secondary: #0f172a;
   --text-primary: #f8fafc;
@@ -49,7 +54,7 @@ body {
 }
 
 .section-title {
-  @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ths-navy dark:text-white mb-6;
+  @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ths-blue-custom mb-6;
 }
 
 .section-subtitle {
@@ -58,6 +63,10 @@ body {
 
 .glass-card {
   @apply bg-bg-primary/80 dark:bg-bg-secondary/80 backdrop-blur-md border border-white/20 dark:border-white/5 shadow-lg;
+}
+
+.btn-red {
+  @apply px-8 py-3 bg-ths-red-custom text-white font-semibold rounded-full hover:brightness-110 transition-all duration-300 shadow-md hover:shadow-xl;
 }
 
 .btn-primary {

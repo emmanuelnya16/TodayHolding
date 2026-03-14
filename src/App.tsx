@@ -218,7 +218,7 @@ const Navbar = ({ isDarkMode, toggleTheme }: { isDarkMode: boolean, toggleTheme:
             {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
           </button>
 
-          <a href="#contact" className="btn-gold !py-2 !px-6 text-sm">Nous Contacter</a>
+          <a href="#contact" className="btn-red !py-2 !px-6 text-sm">Nous Contacter</a>
         </div>
 
         {/* Mobile Toggle */}
@@ -254,7 +254,7 @@ const Navbar = ({ isDarkMode, toggleTheme }: { isDarkMode: boolean, toggleTheme:
                 {link.name}
               </a>
             ))}
-            <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="btn-primary text-center">Nous Contacter</a>
+            <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="btn-red text-center">Nous Contacter</a>
           </motion.div>
         )}
       </AnimatePresence>
@@ -290,7 +290,7 @@ const Hero = () => {
             Conception, Maturation et Financement de Projets stratégiques pour le développement du continent.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#projects" className="btn-gold w-full sm:w-auto flex items-center justify-center gap-2">
+            <a href="#projects" className="btn-red w-full sm:w-auto flex items-center justify-center gap-2">
               Découvrir nos projets <ArrowRight size={18} />
             </a>
             <a href="#contact" className="btn-outline w-full sm:w-auto !border-white !text-white hover:!bg-white hover:!text-ths-navy">
@@ -323,7 +323,7 @@ const Values = () => {
         <div className="text-center mb-16">
           <span className="section-subtitle">Engagement & Éthique</span>
           <h2 className="section-title">Nos Valeurs Fondamentales</h2>
-          <p className="max-w-2xl mx-auto text-text-secondary">
+          <p className="max-w-2xl mx-auto text-text-primary">
             Nous bâtissons l'avenir de l'Afrique sur des piliers solides de transparence, d'innovation et de responsabilité sociale.
           </p>
         </div>
@@ -338,8 +338,8 @@ const Values = () => {
               <div className="w-14 h-14 bg-ths-navy/5 dark:bg-white/5 rounded-xl flex items-center justify-center text-ths-navy dark:text-ths-gold mb-6 group-hover:bg-ths-navy dark:group-hover:bg-ths-gold group-hover:text-white dark:group-hover:text-ths-navy transition-colors">
                 <val.icon size={28} />
               </div>
-              <h3 className="text-xl font-bold text-ths-navy dark:text-white mb-3">{val.title}</h3>
-              <p className="text-text-secondary leading-relaxed">{val.desc}</p>
+              <h3 className="text-xl font-bold text-text-primary dark:text-white mb-3">{val.title}</h3>
+              <p className="text-text-primary leading-relaxed">{val.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -355,15 +355,15 @@ const Values = () => {
           </div>
           <div>
             <span className="section-subtitle">Impact Social</span>
-            <h2 className="text-3xl font-display font-bold text-ths-navy mb-6">Notre Responsabilité Sociétale (RSE)</h2>
+            <h2 className="text-3xl font-display font-bold text-ths-blue-custom mb-6">Notre Responsabilité Sociétale (RSE)</h2>
             <div className="space-y-6">
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-10 h-10 bg-ths-green/10 text-ths-green rounded-full flex items-center justify-center">
                   <CheckCircle2 size={20} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-ths-navy text-lg mb-1">Développement Local</h4>
-                  <p className="text-slate-600">Formation professionnelle, soutien aux entrepreneurs locaux et partenariats éducatifs structurants.</p>
+                  <h4 className="font-bold text-text-primary text-lg mb-1">Développement Local</h4>
+                  <p className="text-text-primary">Formation professionnelle, soutien aux entrepreneurs locaux et partenariats éducatifs structurants.</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -371,8 +371,8 @@ const Values = () => {
                   <CheckCircle2 size={20} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-ths-navy text-lg mb-1">Environnement</h4>
-                  <p className="text-slate-600">Études d'impact rigoureuses, promotion des énergies renouvelables et gestion durable des déchets.</p>
+                  <h4 className="font-bold text-text-primary text-lg mb-1">Environnement</h4>
+                  <p className="text-text-primary">Études d'impact rigoureuses, promotion des énergies renouvelables et gestion durable des déchets.</p>
                 </div>
               </div>
             </div>
@@ -404,7 +404,7 @@ const Projects = () => {
               <button 
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${filter === cat ? 'bg-ths-navy text-white dark:bg-ths-gold dark:text-ths-navy' : 'bg-bg-secondary text-text-secondary hover:bg-slate-200 dark:hover:bg-slate-800'}`}
+                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${filter === cat ? 'bg-ths-blue-custom text-white' : 'bg-bg-secondary text-text-secondary hover:bg-slate-200 dark:hover:bg-slate-800'}`}
               >
                 {cat}
               </button>
@@ -425,36 +425,36 @@ const Projects = () => {
               >
                 <div className="p-8">
                   <div className="flex justify-between items-start mb-4">
-                    <span className="px-3 py-1 bg-ths-gold/10 text-ths-gold text-xs font-bold rounded-full uppercase tracking-wider">
+                    <span className="px-3 py-1 bg-ths-blue-custom/10 text-ths-blue-custom text-xs font-bold rounded-full uppercase tracking-wider">
                       {project.category}
                     </span>
-                    <span className="text-ths-navy dark:text-ths-gold font-accent font-bold">{project.projectsCount}</span>
+                    <span className="text-ths-red-custom-2 font-accent font-bold">{project.projectsCount}</span>
                   </div>
-                  <h3 className="text-2xl font-display font-bold text-ths-navy dark:text-white mb-4 group-hover:text-ths-blue-medium dark:group-hover:text-ths-gold transition-colors">
+                  <h3 className="text-2xl font-display font-bold text-ths-blue-custom mb-4 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-text-secondary mb-6 line-clamp-2">
+                  <p className="text-text-primary mb-6 line-clamp-2">
                     {project.description}
                   </p>
                   
                   <div className="mb-6">
                     <div className="flex justify-between text-sm font-bold mb-2">
-                      <span className="text-text-secondary uppercase tracking-tighter opacity-60">Maturité du Concept</span>
-                      <span className="text-ths-navy dark:text-ths-gold">{project.maturity}%</span>
+                      <span className="text-text-primary uppercase tracking-tighter opacity-70">Maturité du Concept</span>
+                      <span className="text-ths-red-custom-2">{project.maturity}%</span>
                     </div>
                     <div className="w-full h-2 bg-bg-secondary rounded-full overflow-hidden">
                       <motion.div 
                         initial={{ width: 0 }}
                         whileInView={{ width: `${project.maturity}%` }}
                         transition={{ duration: 1, delay: 0.2 }}
-                        className="h-full bg-gradient-to-r from-ths-blue-medium to-ths-blue-dark dark:from-ths-gold dark:to-white"
+                        className="h-full bg-ths-red-custom-2"
                       />
                     </div>
                   </div>
 
                   <div className="flex flex-wrap gap-2">
                     {project.sectors.map(s => (
-                      <span key={s} className="text-[10px] font-bold text-text-secondary opacity-50 border border-card-border px-2 py-1 rounded uppercase">
+                      <span key={s} className="text-[10px] font-bold text-ths-blue-custom border border-ths-blue-custom/20 bg-ths-blue-custom/5 px-2 py-1 rounded uppercase">
                         {s}
                       </span>
                     ))}
@@ -497,7 +497,7 @@ const Partners = () => {
         <div className="text-center mb-16">
           <span className="section-subtitle">Réseau Mondial</span>
           <h2 className="section-title">Nos Partenaires Stratégiques</h2>
-          <p className="max-w-2xl mx-auto text-text-secondary">
+          <p className="max-w-2xl mx-auto text-text-primary">
             Un écosystème de confiance composé d'institutions financières, de partenaires techniques et de bailleurs de fonds internationaux.
           </p>
         </div>
@@ -507,13 +507,13 @@ const Partners = () => {
           <div className="flex gap-12 animate-marquee whitespace-nowrap">
             {PARTNERS.map((p, i) => (
               <div key={i} className="flex-shrink-0 w-48 h-24 bg-card-bg rounded-xl shadow-sm border border-card-border flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-pointer">
-                <span className="text-text-secondary opacity-60 font-bold text-sm uppercase">{p}</span>
+                <span className="text-text-primary opacity-80 font-bold text-sm uppercase">{p}</span>
               </div>
             ))}
             {/* Duplicate for seamless loop */}
             {PARTNERS.map((p, i) => (
               <div key={`dup-${i}`} className="flex-shrink-0 w-48 h-24 bg-card-bg rounded-xl shadow-sm border border-card-border flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-pointer">
-                <span className="text-text-secondary opacity-60 font-bold text-sm uppercase">{p}</span>
+                <span className="text-text-primary opacity-80 font-bold text-sm uppercase">{p}</span>
               </div>
             ))}
           </div>
@@ -600,7 +600,7 @@ const Gallery = () => {
         <div className="text-center mb-16">
           <span className="section-subtitle">Immersion</span>
           <h2 className="section-title">Galerie & Vidéos</h2>
-          <p className="max-w-2xl mx-auto text-text-secondary">
+          <p className="max-w-2xl mx-auto text-text-primary">
             Découvrez nos réalisations et nos concepts à travers notre sélection de vidéos et d'images.
           </p>
         </div>
@@ -621,12 +621,12 @@ const Gallery = () => {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-ths-navy/40 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-4">
-                <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/30 group-hover:scale-110 transition-transform duration-500">
+              <div className="absolute inset-0 bg-white/80 dark:bg-ths-navy/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-4">
+                <div className="w-16 h-16 bg-ths-navy/10 dark:bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-ths-navy dark:text-white border border-ths-navy/20 dark:border-white/30 group-hover:scale-110 transition-transform duration-500">
                   <Play size={item.large ? 48 : 32} fill="currentColor" />
                 </div>
                 {item.large && (
-                  <span className="text-white font-display font-bold text-xl tracking-tight translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                  <span className="text-text-primary dark:text-white font-display font-bold text-xl tracking-tight translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     {item.title}
                   </span>
                 )}
@@ -635,21 +635,21 @@ const Gallery = () => {
                 <div className="absolute top-4 right-4 flex flex-col gap-2 translate-x-12 group-hover:translate-x-0 transition-transform duration-500 delay-100">
                   <button 
                     onClick={(e) => shareOnSocial(e, 'facebook', item.videoId)}
-                    className="w-8 h-8 bg-white/10 hover:bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/20 transition-colors"
+                    className="w-8 h-8 bg-ths-navy/10 dark:bg-white/10 hover:bg-ths-navy/20 dark:hover:bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center text-ths-navy dark:text-white border border-ths-navy/20 dark:border-white/20 transition-colors"
                     title="Partager sur Facebook"
                   >
                     <Facebook size={14} />
                   </button>
                   <button 
                     onClick={(e) => shareOnSocial(e, 'twitter', item.videoId)}
-                    className="w-8 h-8 bg-white/10 hover:bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/20 transition-colors"
+                    className="w-8 h-8 bg-ths-navy/10 dark:bg-white/10 hover:bg-ths-navy/20 dark:hover:bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center text-ths-navy dark:text-white border border-ths-navy/20 dark:border-white/20 transition-colors"
                     title="Partager sur Twitter"
                   >
                     <Twitter size={14} />
                   </button>
                   <button 
                     onClick={(e) => shareOnSocial(e, 'linkedin', item.videoId)}
-                    className="w-8 h-8 bg-white/10 hover:bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/20 transition-colors"
+                    className="w-8 h-8 bg-ths-navy/10 dark:bg-white/10 hover:bg-ths-navy/20 dark:hover:bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center text-ths-navy dark:text-white border border-ths-navy/20 dark:border-white/20 transition-colors"
                     title="Partager sur LinkedIn"
                   >
                     <Linkedin size={14} />
@@ -760,7 +760,7 @@ const PhotoGallery = () => {
         <div className="text-center mb-16">
           <span className="section-subtitle">Portfolio Visuel</span>
           <h2 className="section-title">Galerie Photos</h2>
-          <p className="max-w-2xl mx-auto text-text-secondary">
+          <p className="max-w-2xl mx-auto text-text-primary">
             Une immersion visuelle dans l'univers de Today Holding Society et nos projets à travers le continent.
           </p>
         </div>
@@ -779,15 +779,15 @@ const PhotoGallery = () => {
                 className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-ths-navy/60 dark:bg-ths-blue-dark/70 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
+              <div className="absolute inset-0 bg-white/90 dark:bg-ths-blue-dark/70 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
                 <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                   <span className="text-ths-gold text-xs font-bold uppercase tracking-widest mb-2 block">
                     {item.category}
                   </span>
-                  <h3 className="text-white font-display font-bold text-2xl mb-4">
+                  <h3 className="text-text-primary dark:text-white font-display font-bold text-2xl mb-4">
                     {item.title}
                   </h3>
-                  <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/30">
+                  <div className="w-12 h-12 bg-ths-navy/10 dark:bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-ths-navy dark:text-white border border-ths-navy/20 dark:border-white/30">
                     <Maximize2 size={20} />
                   </div>
                 </div>
@@ -956,7 +956,7 @@ const Contact = () => {
                 <label className="text-sm font-bold text-text-primary uppercase tracking-wider">Message</label>
                 <textarea rows={5} className="w-full px-4 py-3 rounded-xl border border-border-color bg-bg-primary text-text-primary focus:ring-2 focus:ring-ths-gold outline-none transition-all" placeholder="Votre message ici..."></textarea>
               </div>
-              <button type="submit" className="w-full btn-primary !rounded-xl py-4 flex items-center justify-center gap-2">
+              <button type="submit" className="w-full btn-red !rounded-xl py-4 flex items-center justify-center gap-2">
                 Envoyer ma demande <ArrowRight size={20} />
               </button>
             </form>
